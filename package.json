@@ -1,0 +1,14 @@
+{
+  "name": "oracle-final-chat",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kate brooks",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io":"1.7.3",
+    "express":"4.15.2"
+  }
+}
