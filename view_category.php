@@ -41,7 +41,7 @@ $res2 = mysqli_query($con,$sql2) or die(mysqli_error($con));
 if (mysqli_num_rows($res2) > 1) {
 	$topics .= "<table width='100%' style='border-collapse: collapse;'>";
 	$topics .= "<tr><td colspan='3'><a href='signin.php'>Return to Dashboard</a>".$logged."<hr /></td></tr>";
-	$topics .= "<tr style='background-color: #dddddd;'><td>Topic Title</td><td width='65' align='center'>Replies</td><td width='65' align='center'>Views</td></tr>";
+	$topics .= "<tr style='background-color: #fff;'><td>Topic Title</td><td width='65' align='center'>Replies</td><td width='65' align='center'>Views</td></tr>";
 	$topics .= "<tr><td colspan='3'><hr /></td></tr>";
 	while ($row = mysqli_fetch_assoc($res2)) {
 		$tid = $row['id'];

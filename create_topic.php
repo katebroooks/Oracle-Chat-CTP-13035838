@@ -20,24 +20,22 @@ echo "<p>You are logged in as ".$_SESSION['username']." &bull; <a href='logout_p
 ?>
 </div>
 <!-- Create topic form -->
-<div class="col-md-6">
 <div class="content">
-<form class="form" action="create_topic_parse.php" method="post">
-<p>Topic Title</p>
-<input type="text" name="topic_title" size="98" maxlength="150" />
+<form action="create_topic_parse.php" method="post">
+<p>Topic Title</p><hr />
+<input type="text" name="topic_title" size="76" maxlength="150" /><br /><br />
 <p>Topic Content</p>
 <textarea class="forum-textarea" name="topic_content" rows="5" cols="75"></textarea>
 <br /><br />
-<div class="col-md-2 forum-sub">
 <input type="hidden" name="cid" value="<?php echo $cid; ?>" />
+<div class="forum-sub">
 <input type="submit" name="topic_submit" value="Create your topic" />
 </div>
+</div>
 </form>
+</div>
 </div><!-- End content -->
 </div><!-- End content main -->
-</div><!-- End page-wrapper -->
-</div>
-</div>
 <?php
 include('html/footer.html');
 ?>

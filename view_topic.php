@@ -24,7 +24,6 @@ include('error_handling.php');
   ?>
 </div>
 <!-- End login form -->
-<hr />
 <div class="content-box">
 <?php include_once('connect.php');
 $cid = $_GET['cid'];
@@ -34,12 +33,12 @@ $res = mysqli_query($con,$sql) or die(mysqli_error($con));
 if (mysqli_num_rows($res) == 1) {
   echo "<table class='table' width='60%'>";
   if ($_SESSION['uid']) {
-    echo "<tr class='table-row'><td class='table-text' colspan='2'><div class='forum-sub'><input type='submit' value='Add Reply' onClick=\"window.location = 'post_reply.php?cid=".$cid."&tid=".$tid."'\" /></div><hr />"; } else { echo "<tr class='table-row'><td class='table-text' colspan='2'><p>Please log in to add your reply.</p></td></tr>"; }
+    echo "<tr class='table-row'><td class='table-text' colspan='2'><div class='forum-sub'><input type='submit' value='Add Reply' onClick=\"window.location = 'post_reply.php?cid=".$cid."&tid=".$tid."'\" /></div>"; } else { echo "<tr class='table-row'><td class='table-text' colspan='2'><p>Please log in to add your reply.</p></td></tr>"; }
   while ($row = mysqli_fetch_assoc($res)) {
     $sql2 = "SELECT * FROM posts WHERE category_id='".$cid."' AND topic_id='".$tid."'";
     $res2 = mysqli_query($con,$sql2) or die(mysqli_error($con));
     while ($row2 = mysqli_fetch_assoc($res2)) {
-      echo "<tr class='table-row'><td class='table-text' valign='top'><div style='min-height: 125px;'>".$row['topic_title']."<br />by ".$row2['post_creator']." - ".$row2['post_date']."<hr />".$row2['post_content']."</div></td><td class='table-text' width='200' valign='top' align='center' style'border: 1px solid #fff;'>User Info Here</td></tr><tr class='table-row'><td class='table-text' colspan='2'><hr /></td></tr>";
+      echo "<tr class='table-row'><td class='table-text' valign='top'><div style='min-height: 125px;'>".$row['topic_title']."<br />by ".$row2['post_creator']." - ".$row2['post_date']."<hr />".$row2['post_content']."</div></td><td class='table-text' width='200' valign='top' align='center' style'border: 1px solid #fff;'>User Info Here</td></tr><tr class='table-row'><td class='table-text' colspan='2'></td></tr>";
     }
     $old_views = $row['topic_views'];
     $new_views = $old_views + 1;
