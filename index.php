@@ -1,15 +1,15 @@
-<?php session_start();
-include('html/header.html');
-include('error_handling.php');
-?>
 <!---------------------------------
 Oracle Chat Application - Kate Brooks
 Student Number: 13035838
 ------------------------------------->
+<?php session_start();
+include('html/header.html');
+include('error_handling.php');
+?>
 <div id="page-wrapper" class="gray-bg dashbard-1">
 <div class="content-main" id="content-section"><!-- Ajax would go here -->
 <!--pie-chart--->
-<script src="js/pie-chart.js" type="text/javascript"></script>
+<script src="public/js/pie-chart.js" type="text/javascript"></script>
  <script type="text/javascript">
         $(document).ready(function () {
             $('#demo-pie-1').pieChart({
@@ -130,7 +130,7 @@ Student Number: 13035838
 				</div>
 			</div>
 		</div>
-		<!-- Chart.js random chart generator to show statistical effects-->
+		<!-- Chart.js random chart generator to show statistical effects for data visualisation-->
 		<div class="content-bottom">
 		<div class="graph-box">
 			<div class="col-md-4 graph-3">

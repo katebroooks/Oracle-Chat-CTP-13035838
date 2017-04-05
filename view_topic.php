@@ -32,7 +32,7 @@ $sql = "SELECT * FROM topics WHERE category_id='".$cid."' AND id='".$tid."' LIMI
 $res = mysqli_query($con,$sql) or die(mysqli_error($con));
 if (mysqli_num_rows($res) == 1) {
   echo "<table class='table' width='60%'>";
-  if ($_SESSION['uid']) {
+  if (isset($_SESSION['uid'])) {
     echo "<tr class='table-row'><td class='table-text' colspan='2'><div class='forum-sub'><input type='submit' value='Add Reply' onClick=\"window.location = 'post_reply.php?cid=".$cid."&tid=".$tid."'\" /></div>"; } else { echo "<tr class='table-row'><td class='table-text' colspan='2'><p>Please log in to add your reply.</p></td></tr>"; }
   while ($row = mysqli_fetch_assoc($res)) {
     $sql2 = "SELECT * FROM posts WHERE category_id='".$cid."' AND topic_id='".$tid."'";

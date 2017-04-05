@@ -31,6 +31,7 @@ if ($_SESSION['uid']) {
         }
       }
     }
+    $email = '';
     $email = substr($email, 0, (strlen($email)) - 2);
     $to = "andileforgetful10@gmail.com";
     $from = "Katherine2.Brooks@live.uwe.ac.uk";
