@@ -6,7 +6,7 @@ include('error_handling.php');
 <!-- Start signin 2 -->
 <div id="page-wrapper" class="gray-bg dashbard-1">
 <div class="content-main">
-<!-- Log in form -->
+<!-- Log in form and check for session state -->
 <div class="login-bottom">
  <h2>Login</h2>
 
@@ -26,6 +26,10 @@ include('error_handling.php');
 <!-- End login form -->
 <div class="content-box">
 <?php include_once('connect.php');
+// Get cat id and topic id, select all from topics table where
+// the category id/topic id matches the category id/ topic id clicked on by user
+// echo a html table containing the categorys with their id and topic
+// Show topic views and for each view, append 1 to the value
 $cid = $_GET['cid'];
 $tid = $_GET['tid'];
 $sql = "SELECT * FROM topics WHERE category_id='".$cid."' AND id='".$tid."' LIMIT 1";

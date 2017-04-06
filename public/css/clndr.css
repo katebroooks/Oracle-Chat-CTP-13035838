@@ -1,3 +1,4 @@
+/*CALENDAR CSS, from clndr plugin: http://kylestetz.github.io/CLNDR/*/
 .cal1{
    background: #fff;
    margin-bottom: 0em;
@@ -39,7 +40,7 @@
 .cal1 .clndr .clndr-controls .month {
    text-align:center;
 }
-.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button { 
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button {
   position:absolute;
   right:20px;
   top:15px;
@@ -58,7 +59,7 @@
 .cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button.inactive:hover {
   cursor: default;
 }
-.cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button { 
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button {
    position:absolute;
    left:20px;
    top:15px;
@@ -154,11 +155,11 @@
 .cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button {
   left: 10px;
   top: 14px;
-}  
+}
 .cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button {
   right: 10px;
   top: 14px;
-}  
+}
 .cal1 .clndr .clndr-table .header-days {
   font-size: 12px;
 }

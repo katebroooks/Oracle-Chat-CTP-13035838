@@ -1,16 +1,16 @@
 <?php session_start();
 include('html/header.html');
 ?>
+<!-- This page shows the potential design of a chat window -->
 <div id="page-wrapper" class="gray-bg dashbard-1">
-<div class="content-main" id="content-section"><!-- Ajax would go here -->
- 	<!--banner-->
+<div class="content-main" id="content-section">
 		    <div class="content-top">
 		     <div class="banner">
 					<div class="forum-question">
 						<h4>I'm looking for someone who specialises in solar panels?</h4>
 						<p><img src="images/profile.jpg"/> Asked by <a href="#"><strong>Terry Tibbs</strong></a> 10 January 17</p>
 						<p>Hi, I've been working on the conceptual design of a solar panel farm in Colorado. We all know how exceptional solar panels or 'tiles' are becoming, which is why I want to make use of the land I own in Colorado.</p>
-						<!--
+						<!-- Hashtags
 							<div class="hashtags">
 								<span class="count">#solar-energy</span>
 								<span class="count">#looking-for-specialist</span>
@@ -34,7 +34,7 @@ include('html/header.html');
 
 		<div class="row">
       <div class="col-md-10">
-		      <div class="forum-textarea"><!-- took out comment class-->
+		      <div class="forum-textarea">
 				        <form id="send-message-area">
 					             <textarea id="sendie" maxlength = '100' placeholder="Type here" rows="8" cols="50"></textarea>
                 </form>

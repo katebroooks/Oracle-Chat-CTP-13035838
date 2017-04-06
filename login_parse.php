@@ -1,7 +1,9 @@
 <?php
 session_start();
 include_once("connect.php");
-
+// If the post request username/pw is matches the username and password in users table
+//result in a connection, if not then mysqli_error
+// If right UN and PW, assign the session username id equiv to the appended username
 if (isset($_POST['username'])) {
 	$username = mysqli_real_escape_string($con,$_POST['username']);
 	$password = mysqli_real_escape_string($con,$_POST['password']);

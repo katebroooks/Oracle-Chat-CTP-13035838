@@ -3,13 +3,14 @@
 include_once 'connect.php';
 include_once 'error_handling.php';
 include_once 'html/header.html';
+// If session with unique ID is not set, take to signin page
 if ((!isset($_SESSION['uid'])) || ($_GET['cid'] == "")) {
 	header("Location: signin2.php");
 	exit();
 }
 $cid = $_GET['cid'];
 ?>
-<!-- Start page -->
+<!-- Start create forum form -->
 <div id="page-wrapper" class="gray-bg dashbard-1">
 <div class="content-main" id="content-section">
 <div class="login">

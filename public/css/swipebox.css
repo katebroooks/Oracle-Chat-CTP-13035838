@@ -1,3 +1,6 @@
+/* Swipebox JQuery Lightbox available at:
+http://brutaldesign.github.io/swipebox/tooltip */
+
 .swipebox-overflow-hidden {
   overflow: hidden!important;
 }
@@ -187,7 +190,7 @@
   }
 }
 
-/* Skin 
+/* Skin
 --------------------------*/
 #swipebox-overlay {
   background: #000;

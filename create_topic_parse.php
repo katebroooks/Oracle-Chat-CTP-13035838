@@ -5,11 +5,13 @@ session_start();
 if ($_SESSION['uid'] == "") {
   header("Location: signin2.php");
   exit();
-}
+} // If input fields have not been sucessfully input, return to previous page
 if (isset($_POST['topic_submit'])) {
   if (($_POST['topic_title'] == "") && ($_POST['topic_content'] == "")) {
 echo "You did not fill in both fields. Please return to previous page.";
 exit ();
+// If users entered both fields, conect to database insert the data below into the topics
+// posts and category tables then proceed to view topic link appending category and topic id
   } else {
     include_once ('connect.php');
     $cid = $_POST['cid'];

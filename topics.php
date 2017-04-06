@@ -1,6 +1,7 @@
 <?php session_start();
 include('html/header.html');
 ?>
+<!-- This page make use of bootstraps img-reponsive class and the animated hover tooltips -->
 <div id="page-wrapper" class="gray-bg dashbard-1">
 <div class="content-main" id="content-section"><!-- Ajax would go here -->
    <!--topic-->

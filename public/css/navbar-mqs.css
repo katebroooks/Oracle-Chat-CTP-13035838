@@ -1,3 +1,5 @@
+/* Navbar media queries, not fuly implemented */
+
 #wrapper {
     width: 100%;
 }
@@ -28,7 +30,7 @@
 
 .navbar-top-links li a {
     padding: 15px;
-  
+
 }
 
 .navbar-top-links .dropdown-menu li {
@@ -105,7 +107,7 @@
         z-index: 1;
         position: absolute;
         width: 250px;
-        
+
     }
 
     .navbar-top-links .dropdown-messages,
@@ -114,4 +116,3 @@
         margin-left: auto;
     }
 }
-

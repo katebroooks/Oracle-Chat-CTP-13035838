@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Apr 02, 2017 at 11:24 PM
+-- Generation Time: Apr 06, 2017 at 12:59 AM
 -- Server version: 5.5.38
 -- PHP Version: 5.5.14
 
@@ -26,7 +26,7 @@ CREATE TABLE `categories` (
   `category_description` varchar(255) NOT NULL,
   `last_post_date` datetime DEFAULT NULL,
   `last_user_posted` int(11) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `categories`
@@ -38,7 +38,7 @@ INSERT INTO `categories` (`id`, `category_title`, `category_description`, `last_
 (3, 'Earth Shelters & Green Homes', 'Making your own or collaborating? Get chatting here.', NULL, NULL),
 (4, 'Energy & Transportation', 'Get chatting about innovative green alternatives to transport.', NULL, NULL),
 (5, 'Water & Waste', 'Discuss water management initiatives, at home or on an industrial level. Surface water capture treatments, retention, attenuation, infiltration. Biological treatment, landfill, collection and transport, markets and policy, anaerobic digestion.', NULL, NULL),
-(6, 'Biofuel', 'Meets the transportation needs of society, how do we implement this into our every lives. What effect is this having. ', '2017-04-02 20:17:57', 1),
+(6, 'Biofuel', 'Meets the transportation needs of society, how do we implement this into our every lives. What effect is this having. ', '2017-04-05 21:26:50', 1),
 (7, 'Food & Gardening', 'Home grown, small-scale, large-scale. Planting methods, tips of the trade. Nutrition, best results. ', NULL, NULL),
 (8, 'Solar Energy', 'At home, solar farms, solar DIY. You name, solar conversations are here.', '2017-04-02 17:51:50', 1),
 (9, 'Urban Sustainability', 'Need advice on how to cope in the big apple, check it here. ', '2017-04-02 17:36:47', 1),
@@ -57,7 +57,7 @@ CREATE TABLE `posts` (
   `post_creator` int(11) NOT NULL,
   `post_content` text NOT NULL,
   `post_date` datetime NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Dumping data for table `posts`
@@ -85,7 +85,10 @@ INSERT INTO `posts` (`id`, `category_id`, `topic_id`, `post_creator`, `post_cont
 (19, 17, 9, 1, 'yoyoyoyo', '2017-04-02 17:51:50'),
 (20, 6, 10, 1, 'This is a test topic paragraph.', '2017-04-02 20:17:57'),
 (21, 2, 4, 1, '', '2017-04-02 20:41:11'),
-(22, 10, 11, 1, 'new category', '2017-04-02 22:05:50');
+(22, 10, 11, 1, 'new category', '2017-04-02 22:05:50'),
+(23, 6, 12, 1, '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."', '2017-04-05 21:20:46'),
+(24, 6, 12, 1, 'Yeah I know how...', '2017-04-05 21:21:01'),
+(25, 6, 12, 1, 'Actually you can quite simply use a barrel and an iron to perform this simple request.', '2017-04-05 21:26:50');
 
 -- --------------------------------------------------------
 
@@ -102,7 +105,7 @@ CREATE TABLE `topics` (
   `topic_date` datetime NOT NULL,
   `topic_reply_date` datetime NOT NULL,
   `topic_views` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `topics`
@@ -112,14 +115,15 @@ INSERT INTO `topics` (`id`, `category_id`, `topic_title`, `topic_creator`, `topi
 (1, 2, 'hello', 1, 0, '2017-03-31 14:17:51', '2017-03-31 14:17:51', 0),
 (2, 2, 'hello', 1, 0, '2017-04-01 20:23:07', '2017-04-01 20:23:07', 1),
 (3, 2, 'hello', 1, 0, '2017-04-01 20:23:48', '2017-04-01 20:23:48', 5),
-(4, 2, 'hello', 1, 1, '2017-04-01 20:24:41', '2017-04-02 20:41:11', 29),
+(4, 2, 'hello', 1, 1, '2017-04-01 20:24:41', '2017-04-02 20:41:11', 31),
 (5, 12, 'How can you safely make your own biofuel at home?', 1, 1, '2017-04-02 16:43:57', '2017-04-02 17:47:34', 1),
 (6, 12, 'How can you safely make your own biofuel at home?', 1, 1, '2017-04-02 16:47:10', '2017-04-02 17:44:47', 5),
 (7, 12, 'This is a test topic.', 1, 1, '2017-04-02 17:25:56', '2017-04-02 17:35:54', 4),
 (8, 18, 'Test topic', 1, NULL, '2017-04-02 17:36:47', '2017-04-02 17:36:47', 1),
 (9, 17, 'Yoyoyoyo', 1, NULL, '2017-04-02 17:51:50', '2017-04-02 17:51:50', 1),
 (10, 6, 'This is a test topic.', 1, NULL, '2017-04-02 20:17:57', '2017-04-02 20:17:57', 3),
-(11, 10, 'New category', 1, NULL, '2017-04-02 22:05:50', '2017-04-02 22:05:50', 1);
+(11, 10, 'New category', 1, NULL, '2017-04-02 22:05:50', '2017-04-02 22:05:50', 1),
+(12, 6, 'Biofuel - how can I implement  system in an urban space?', 1, 1, '2017-04-05 21:20:46', '2017-04-05 21:26:50', 8);
 
 -- --------------------------------------------------------
 
@@ -178,17 +182,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `topics`
 --
 ALTER TABLE `topics`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `users`
 --

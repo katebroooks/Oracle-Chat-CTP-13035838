@@ -1,6 +1,10 @@
 <?php session_start();
 include ('error_handling.php');
 if ($_SESSION['uid']) {
+  // If a reply has been submitted in the html form,
+  //assign the session uid to the variable EvWatcher
+  // Insert into posts the cat id, topic id and creator name
+  // Update the catgories and Topics tables accordingly
   if (isset($_POST['reply_submit'])) {
     include_once 'connect.php';
     $creator = $_SESSION['uid'];

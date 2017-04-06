@@ -9,6 +9,11 @@ include('error_handling.php');
 <div class="login">
 <div class="login-bottom">
  <h2>Login</h2>
+ <! --
+ Once the form has been submitted,
+the login_parse script is intiated which checks the users details against those in the database
+ if they are correct, the session state and unique id is set. If not the user is presented with
+ invalid login information -->
   <?php
   if (!isset($_SESSION['uid'])) {
   echo "<form action='login_parse.php' method='post'>

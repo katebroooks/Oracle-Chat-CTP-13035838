@@ -1,12 +1,15 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "root";
-$db = "forumseries";
+$host = "localhost"; //UWE: Stocks
+$username = "root"; // UWE: fet13035838
+$password = "root"; // ********
+$db = "forumseries"; // fet13035838
 
-//$connect_error = ("Cannot connect due to error");
-//mysql_connect($host, $username, $password) or die (mysql_error());
-//mysql_select_db($db);
+//UWE server: Stocks
+// UWE username: fet13035838
+// UWE password: ********
+// UWE Database:fet13035838
+
+//Stores all of the database information
 
 $con = mysqli_connect('localhost', 'root', 'root', 'forumseries');
 if (mysqli_connect_errno())

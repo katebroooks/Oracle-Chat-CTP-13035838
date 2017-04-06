@@ -92,12 +92,12 @@ include('html/header.html');
 			                </li>
 			            </ul>
 			        </div>
-                            <div class="btn-group">
-                                <a class="btn btn-default"><i class="fa fa-angle-left"></i></a>
-                                <a class="btn btn-default"><i class="fa fa-angle-right"></i></a>
-                            </div>
-			    </div>
-               </div>
+      <div class="btn-group">
+              <a class="btn btn-default"><i class="fa fa-angle-left"></i></a>
+              <a class="btn btn-default"><i class="fa fa-angle-right"></i></a>
+      </div>
+	</div>
+</div>
 							 <!-- Inbox messages -->
                 <table class="table">
                     <tbody>

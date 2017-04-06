@@ -3,12 +3,11 @@ include('html/header.html');
 ?>
 
 <div id="page-wrapper" class="gray-bg dashbard-1">
-<div class="content-main" id="content-section"><!-- Ajax would go here -->
+<div class="content-main" id="content-section">
 <!--Start forum 2-->
-<!--banner-->
 <div class="content-top">
 	<div class="banner">
-	<!-- Fetch categories script -->
+	<!-- Fetch categories from MySQL database table by category_title in ascending order -->
 	  <?php
 	  require_once 'connect.php';
 	  $sql = "SELECT * FROM categories ORDER BY category_title ASC";

@@ -2,6 +2,8 @@
 include_once 'connect.php';
 include_once 'error_handling.php';
 include_once 'html/header.html';
+// if the unique id is not set or the category id is equivalent to nothing
+// go to the signin page and exit the function
 if ((!isset($_SESSION['uid'])) || ($_GET['cid'] == "")) {
 	header("Location: signin2.php");
 	exit();
@@ -18,6 +20,7 @@ $tid = $_GET['tid'];
 <?php
 echo "<p>You are logged in as ".$_SESSION['username']." &bull; <a href='logout_parse.php'>Logout</a></p>";
 ?>
+<!-- This page links to the post_reply_parse script which checks the user login status and makes queries to the sql database -->
 </div>
 </div>
 <div id="content" class="content">
